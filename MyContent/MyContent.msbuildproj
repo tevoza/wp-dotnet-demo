@@ -1,0 +1,10 @@
+﻿<Project Sdk="Peachpied.WordPress.Build.Plugin/5.6.0-preview5">
+  <PropertyGroup>
+    <WpContentTarget>
+    </WpContentTarget>
+    <PhpRelativePath>wp-content/</PhpRelativePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Update="function.php" Link="wordpress\wp-content\function.php" />
+  </ItemGroup>
+</Project>
