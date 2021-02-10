@@ -7,4 +7,7 @@
   <ItemGroup>
     <Content Update="function.php" Link="wordpress\wp-content\function.php" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="plugins\countdown-builder\classes\blocks\" />
+  </ItemGroup>
 </Project>

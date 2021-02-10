@@ -45,13 +45,13 @@ namespace JokesWebApp.Plugins
         }
 
         public string Title { get; } = "Demo Widget";
-        public static void myecho(Context ctx) { ctx.Echo("Hello from library!"); }
 
         public override PhpValue widget(PhpValue args, PhpValue instance)
         {
             WP_Hook Hook = new WP_Hook();
             PhpValue title = Hook.apply_filters("widget_title", instance["title"]);
             ct.RenderPartial("DemoWidget", this);
+            
             return title;
         }
 
