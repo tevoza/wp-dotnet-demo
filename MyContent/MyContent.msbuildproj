@@ -2,7 +2,7 @@
   <PropertyGroup>
     <WpContentTarget>
     </WpContentTarget>
-    <PhpRelativePath>wp-content/</PhpRelativePath>
+    <PhpRelativePath>wp-content\</PhpRelativePath>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="plugins\woocommerce\includes\cli\class-wc-cli-rest-command.php" />
@@ -10,7 +10,7 @@
     <Compile Include="plugins\woocommerce\includes\cli\class-wc-cli-tool-command.php" />
     <Compile Include="plugins\woocommerce\includes\cli\class-wc-cli-update-command.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\autoload.php" />
-    <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\AutoloadGenerator.php" />
+    <!--<Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\AutoloadGenerator.php" />-->
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\AutoloadProcessor.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\class-autoloader-handler.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\class-autoloader-locator.php" />
@@ -18,7 +18,7 @@
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\class-plugins-handler.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\class-version-loader.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\class-version-selector.php" />
-    <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\CustomAutoloaderPlugin.php" />
+    <!--<Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\CustomAutoloaderPlugin.php" />-->
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\functions.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\automattic\jetpack-autoloader\src\ManifestGenerator.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\AglInstaller.php" />
@@ -52,7 +52,7 @@
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\GravInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\HuradInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\ImageCMSInstaller.php" />
-    <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\Installer.php" />
+    <!--<Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\Installer.php" />-->
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\ItopInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\JoomlaInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\KanboardInstaller.php" />
@@ -85,7 +85,7 @@
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\PimcoreInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\PiwikInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\PlentymarketsInstaller.php" />
-    <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\Plugin.php" />
+    <!--<Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\Plugin.php" />-->
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\PortoInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\PPIInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\PrestashopInstaller.php" />
@@ -118,7 +118,7 @@
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\ZendInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-admin\vendor\composer\installers\src\Composer\Installers\ZikulaInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\autoload.php" />
-    <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\AutoloadGenerator.php" />
+    <!--<Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\AutoloadGenerator.php" />-->
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\AutoloadProcessor.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\class-autoloader-handler.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\class-autoloader-locator.php" />
@@ -126,7 +126,7 @@
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\class-plugins-handler.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\class-version-loader.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\class-version-selector.php" />
-    <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\CustomAutoloaderPlugin.php" />
+    <!--<Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\CustomAutoloaderPlugin.php" />-->
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\functions.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\automattic\jetpack-autoloader\src\ManifestGenerator.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\AglInstaller.php" />
@@ -160,7 +160,7 @@
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\GravInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\HuradInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\ImageCMSInstaller.php" />
-    <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\Installer.php" />
+    <!--<Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\Installer.php" />-->
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\ItopInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\JoomlaInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\KanboardInstaller.php" />
@@ -193,7 +193,7 @@
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\PimcoreInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\PiwikInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\PlentymarketsInstaller.php" />
-    <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\Plugin.php" />
+    <!--<Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\Plugin.php" />-->
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\PortoInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\PPIInstaller.php" />
     <Compile Include="plugins\woocommerce\packages\woocommerce-blocks\vendor\composer\installers\src\Composer\Installers\PrestashopInstaller.php" />
@@ -242,7 +242,7 @@
     <Compile Include="plugins\woocommerce\vendor\automattic\jetpack-autoloader\src\class-plugins-handler.php" />
     <Compile Include="plugins\woocommerce\vendor\automattic\jetpack-autoloader\src\class-version-loader.php" />
     <Compile Include="plugins\woocommerce\vendor\automattic\jetpack-autoloader\src\class-version-selector.php" />
-    <Compile Include="plugins\woocommerce\vendor\automattic\jetpack-autoloader\src\CustomAutoloaderPlugin.php" />
+    <!--<Compile Include="plugins\woocommerce\vendor\automattic\jetpack-autoloader\src\CustomAutoloaderPlugin.php" />-->
     <Compile Include="plugins\woocommerce\vendor\automattic\jetpack-autoloader\src\ManifestGenerator.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\AglInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\AimeosInstaller.php" />
@@ -275,7 +275,7 @@
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\GravInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\HuradInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\ImageCMSInstaller.php" />
-    <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\Installer.php" />
+    <!--<Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\Installer.php" />-->
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\ItopInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\JoomlaInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\KanboardInstaller.php" />
@@ -308,7 +308,7 @@
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\PimcoreInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\PiwikInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\PlentymarketsInstaller.php" />
-    <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\Plugin.php" />
+    <!--<Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\Plugin.php" />-->
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\PortoInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\PPIInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\PrestashopInstaller.php" />
@@ -342,33 +342,33 @@
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\YawikInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\ZendInstaller.php" />
     <Compile Include="plugins\woocommerce\vendor\composer\installers\src\Composer\Installers\ZikulaInstaller.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\CssSelectorConverterTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\AbstractNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\AttributeNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\ClassNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\CombinedSelectorNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\ElementNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\FunctionNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\HashNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\NegationNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\PseudoNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\SelectorNodeTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Node\SpecificityTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Handler\AbstractHandlerTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Handler\CommentHandlerTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Handler\HashHandlerTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Handler\IdentifierHandlerTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Handler\NumberHandlerTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Handler\StringHandlerTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Handler\WhitespaceHandlerTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\ParserTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\ReaderTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Shortcut\ClassParserTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Shortcut\ElementParserTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Shortcut\EmptyStringParserTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\Shortcut\HashParserTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\TokenStreamTest.php" />
-    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\XPath\TranslatorTest.php" />
+    <!-- <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\cssselectorconvertertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\abstractnodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\attributenodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\classnodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\combinedselectornodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\elementnodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\functionnodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\hashnodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\negationnodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\pseudonodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\selectornodetest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\node\specificitytest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\handler\abstracthandlertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\handler\commenthandlertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\handler\hashhandlertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\handler\identifierhandlertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\handler\numberhandlertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\handler\stringhandlertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\handler\whitespacehandlertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\parsertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\readertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\shortcut\classparsertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\shortcut\elementparsertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\shortcut\emptystringparsertest.php" />
+    <compile include="plugins\woocommerce\vendor\symfony\css-selector\tests\parser\shortcut\hashparsertest.php" />
+    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\Parser\TokenStreamTest.php" />-
+    <Compile Include="plugins\woocommerce\vendor\symfony\css-selector\Tests\XPath\TranslatorTest.php" />-->
   </ItemGroup>
   <ItemGroup>
     <Content Update="function.php" Link="wordpress\wp-content\function.php" />
