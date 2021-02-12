@@ -2,3 +2,29 @@
 
 <h2>Hello from Partial View @Model.Title</h2>
 <p>get to the <a href="/Home">MVC!</a></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Hi!
+            </th>
+            <th>
+                Hi!
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.JokeList)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JokeQuestion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JokeAnswer)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
