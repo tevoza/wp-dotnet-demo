@@ -19,6 +19,11 @@ namespace JokesWebApp.Controllers
             _context = context;
         }
 
+        public string Test()
+        {
+            return "from controleer";
+        }
+
         // GET: Jokes
         public async Task<IActionResult> Index()
         {

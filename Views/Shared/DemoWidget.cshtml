@@ -15,16 +15,5 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.JokeList)
-{
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.JokeQuestion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JokeAnswer)
-            </td>
-        </tr>
-}
     </tbody>
 </table>
