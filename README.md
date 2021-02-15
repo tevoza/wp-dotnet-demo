@@ -7,7 +7,7 @@ WP-to-dotnet Investigation, making use of the <code>PeachPied.WordPress.AspNetCo
 I used docker because it is quick and fast. Don't have to.  
 <code>docker run --name=wp_dotnet -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress mysql --default-authentication-plugin=mysql_native_password</code>  
 Then, in <code>public void ConfigureServices(IServiceCollection services)</code> :
-~~~
+~~~c#
     public void ConfigureServices(IServiceCollection services)
     {
     ...
