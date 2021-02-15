@@ -13,13 +13,14 @@ Then, in <code>public void ConfigureServices(IServiceCollection services)</code>
     ...
         services.AddWordPress(options =>
         {
-            options.DbHost = "192.168.1.16";
+            options.DbHost = "localhost"; //if running on local machine
             options.DbPassword = "password";
             options.DbName = "wordpress";
             ...  
         });
     }
 ~~~
+3. 
 
 # 1. Get a demo version running (status)
 Basic Wordpress site running on .Net  
