@@ -31,7 +31,8 @@ using JokesWebApp.Plugins;
 
 namespace JokesWebApp.Plugins
 {
-    public class DemoWidget : WP_Widget //WordPress plugin written in c#
+    //WordPress plugin written in c#. Uses Peachpie WordPress API made available to .NET
+    public class DemoWidget : WP_Widget 
     {
         Context ct;
         
@@ -49,30 +50,35 @@ namespace JokesWebApp.Plugins
         }
 
         public string Title { get; } = "Demo Widget";
+        public string Joke { get; set;  } = "Haha Widget";
 
         public override PhpValue widget(PhpValue args, PhpValue instance)
         {
             model  = new Views.Shared.DemoWidgetViewModel();
             WP_Hook Hook = new WP_Hook();
             PhpValue title = Hook.apply_filters("widget_title", instance["title"]);
-            System.Diagnostics.Debug.WriteLine("Widget created");
-            ct.RenderPartial("DemoWidgetView", model);
+            using (var scope = ct.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetService<ApplicationDbContext>();
+                var jokes = db.Joke.ToList();
+                Joke = jokes.FirstOrDefault().JokeQuestion;
+            }
 
+            ct.RenderPartial("DemoWidgetView", this);
             return title;
         }
 
         public override PhpValue form(PhpValue instance)
         {
-            PhpValue title;
-            title = "woa";
-
+            //WIP
+            PhpValue title = "incomplete";
             return title;
         }
 
         public override PhpValue update(PhpValue new_instance, PhpValue old_instance)
         {
+            //WIP
             PhpValue instance = old_instance;
-            //instance["title"] =  strip_tags
             return instance;
         }
     }
