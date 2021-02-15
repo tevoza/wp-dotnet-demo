@@ -3,6 +3,7 @@ WP-to-dotnet Investigation, making use of the <code>PeachPied.WordPress.AspNetCo
 
 # Build Project.
 1. Clone from github: <code>git clone https://github.com/tevoza/wp-dotnet-demo</code>  
+3. Add nuget feed: <code>dotnet nuget add source https://feed.peachpie.io/wpdotnet/v3/index.json -n "peachpie.io wpdotnet"</code>
 2. MySQL database(required for WordPress):  
 I used docker because it is quick and fast. Don't have to.  
 <code>docker run --name=wp_dotnet -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress mysql --default-authentication-plugin=mysql_native_password</code>  
