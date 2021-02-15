@@ -38,6 +38,7 @@ namespace JokesWebApp
             services.AddRazorPages();
             services.AddWordPress(options =>
             {
+                //MySQL database connection
                 options.DbHost = "192.168.1.16";
                 options.DbPassword = "password";
                 options.DbName = "wordpress";
