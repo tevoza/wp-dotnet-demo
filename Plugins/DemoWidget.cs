@@ -36,6 +36,7 @@ namespace JokesWebApp.Plugins
         Context ct;
         
         public IEnumerable<JokesWebApp.Models.Joke> JokeList { get; set; }
+        public Views.Shared.DemoWidgetViewModel model { get; set; }
 
         public DemoWidget(Context ctx) : base(
             "demo_widget",
@@ -45,27 +46,18 @@ namespace JokesWebApp.Plugins
         )
         {
             this.ct = ctx;
-
-            //var contextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
-            //    .UseSqlServer(@"Server=(localdb)\\mssqllocaldb;Database=aspnet-JokesWebApp-E055A851-315E-4C91-9F78-617BF5325ED4")
-            //    .Options;
-
-            //using var context = new ApplicationDbContext(contextOptions);
-
-            //JokeList = context.Joke.ToList();
-            //System.Diagnostics.Debug.WriteLine("Widget created");
         }
 
         public string Title { get; } = "Demo Widget";
 
         public override PhpValue widget(PhpValue args, PhpValue instance)
         {
+            model  = new Views.Shared.DemoWidgetViewModel();
             WP_Hook Hook = new WP_Hook();
             PhpValue title = Hook.apply_filters("widget_title", instance["title"]);
             System.Diagnostics.Debug.WriteLine("Widget created");
-            ct.RenderPartial("DemoWidget", this);
-            //return RedirectResult("/Home/Privacy");
-            
+            ct.RenderPartial("DemoWidgetView", model);
+
             return title;
         }
 
