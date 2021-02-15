@@ -1,6 +1,26 @@
 ﻿# WordPress to .Net
 WP-to-dotnet Investigation, making use of the <code>PeachPied.WordPress.AspNetCore</code> package within the <code>.NET Core</code> framework.
 
+# Build Project.
+1. Clone from github: <code>git clone https://github.com/tevoza/wp-dotnet-demo</code>  
+2. MySQL database(required for WordPress):  
+I used docker because it is quick and fast. Don't have to.  
+<code>docker run --name=wp_dotnet -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress mysql --default-authentication-plugin=mysql_native_password</code>  
+Then, in <code>public void ConfigureServices(IServiceCollection services)<\code>:  
+<code>
+        public void ConfigureServices(IServiceCollection services)
+        {
+            ...
+            services.AddWordPress(options =>
+            {
+                options.DbHost = "192.168.1.16";
+                options.DbPassword = "password";
+                options.DbName = "wordpress";
+                ...  
+            });
+        }
+<\code>
+
 # 1. Get a demo version running (status)
 Basic Wordpress site running on .Net  
 Looking towards extension and integration with other .NET pages and plugin integration
