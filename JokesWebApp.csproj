@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="amr-shortcode-any-widget" Version="3.7.0-preview5" />
     <PackageReference Include="clean-blocks" Version="1.1.6-preview5" />
+    <PackageReference Include="hello-elementor" Version="2.3.1-preview5" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />

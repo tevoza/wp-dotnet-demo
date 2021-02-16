@@ -17,7 +17,7 @@ namespace JokesWebApp.Plugins
         {
             app.DashboardWidget("peachpied.widget.1", "Razor Partial View", writer =>
             {
-                app.Context.RenderPartial("DasboardWidget", this);
+                app.Context.RenderPartial("DashboardWidget", this);
             });
         }
     }
