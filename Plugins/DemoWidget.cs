@@ -41,15 +41,17 @@ namespace JokesWebApp.Plugins
             "demo_widget",
             "Demo Widget",
             new PhpArray(2) { { "classname", "DemoWidget" }, { "description", "Wordpress widget in dotnet" } },
-            "idk"
+            "required"
         )
         {
             this.ct = ctx;
         }
 
         public string Title { get; } = "Demo Widget";
-        public string Joke { get; set;  } = "Haha Widget";
+        public string Joke { get; set;  } = "Joke";
+        public string JokeAnswer { get; set;  } = "Answer";
 
+        //Rendering the widget that displays on WordPress page
         public override PhpValue widget(PhpValue args, PhpValue instance)
         {
             WP_Hook Hook = new WP_Hook();
@@ -57,8 +59,7 @@ namespace JokesWebApp.Plugins
             using (var scope = ct.CreateScope())
             {
                 var db = scope.ServiceProvider.GetService<ApplicationDbContext>();
-                var jokes = db.Joke.ToList();
-                Joke = jokes.FirstOrDefault().JokeQuestion;
+                JokeList = db.Joke.ToList();
             }
 
             ct.RenderPartial("DemoWidgetView", this);
@@ -69,6 +70,7 @@ namespace JokesWebApp.Plugins
         {
             //WIP
             PhpValue title = "incomplete";
+            ct.RenderPartial("DemoWidgetAdmin", this);
             return title;
         }
 
