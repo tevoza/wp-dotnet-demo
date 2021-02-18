@@ -26,17 +26,14 @@ Then, in <code>Startup.cs</code> :
 - <code>ExampleWidgetPlugin.cs</code> shows the use of C# in registering a PHP plugin(showing interoperability).
 - <code>MyContent</code> shows PHP plugins built to work with WordPress
 
-# 1. Get a demo version running (status)
-Basic Wordpress site running on .Net  
-Looking towards extension and integration with other .NET pages and plugin integration
-
-# 2. PeachPied investigation:
+# 1. PeachPied investigation:
 1. - [x] **Are there any similar projects out there?**  
     *Not really. At least no other compilers existed for compiling php into the .NET runtime. The compiler is a continuation of the now abandoned Phalanger compiler.*
 2. - [x] **Who are their clients?**  
     *Companies looking for to integrate old-style wordpress with a modern, powerful environment(.NET)*
 3. - [x] **What’s the pricing and commercial agreement implications re using PeachPied?**  
     *The package is free. It makes use of the Apache 2.0 licence which allows liberal use of the software, including the ability to make changes.*  
+    *Depending on how much work they need to do to get desired functionality to work*  
 4. - [x] **Do we have access to the PeachPied source code?**  
     *Yes :D Here: https://github.com/iolevel/wpdotnet-sdk*
 5. - [x] **How well does PeachPied work? i.e**  
@@ -45,10 +42,12 @@ Looking towards extension and integration with other .NET pages and plugin integ
     - **Is it easy to use?**  
         *Yes, a few function calls in <code>Startup.cs</code>*    
     - **How well does it work across different WP modules?**  
+        *Many simpler plugins and themes can be built. More Complex ones don't always compile*  
 6. - [x] **What version of .Net and frameworks are supported?**  
     *.NET Core 3.0 and newer*  
-7. - [ ] **What limitation exists?**  
-8. - [x] **What are the great wins of using this technology?**  
+7. - [x] **What limitation exists?**  
+    *Not all plugins work instantly. MVC integration is limited.*
+9. - [x] **What are the great wins of using this technology?**  
     *Wordpress can be simply built as a <code>.dll</code> file, which reduces weak points of entry(enchancing security. The capability to run within the .NET ecosystem is a massive win.*
 # 3. .Net / C# investigation:
 1. - [x] **Demonstrate the build of a complete page within C# and MVC, making use of SQL, Azure, etc.**  
@@ -57,8 +56,8 @@ Looking towards extension and integration with other .NET pages and plugin integ
    *Wrote a simple demo dashboard plugin with C# adding a custom widget. Still experimenting with more options.*
 3. - [x] **Explore the options in terms of WP themes and WP modules implementations e.g. WooCommerce**  
     *Precompiles themes can easily be installed as NuGet packages from Visual Studio. If they are not available in the repository, they can still be manually built in a .NET wordpress application by dropping them into the wordpress plugin directory.*  
-4. - [ ] **Explore how a module e.g. WooCommerce may updated / extended making use of C# coding**  
-
+4. - [x] **Explore how a module e.g. WooCommerce may updated / extended making use of C# coding**  
+    *An Example of registering a PHP widget in C# is included*  
 # 4. WP investigation (once converted to .Net):
 1. - [x] **Demonstrate the build of an existing page using standard WP builders and tools**  
     *A simple demo website has been built for demonstration purposes, using standard WordPress menus.*  
@@ -66,9 +65,10 @@ Looking towards extension and integration with other .NET pages and plugin integ
     *If the module already exists as a NuGet package, it can be installed simply through NuGet in Visual Studio, and is a more secure signed solution. Dropping the module in the WordPress plugin directory is an alternative option if a NuGet package is not available.*  
 3. - [x] **Demonstrate the upgrade of WP**  
    *<code>PeachPied.WordPress.AspNetCore</code> can be upgraded through NuGet in Visual Studio. It must be noted that any precompiled plugins(installed with NuGet) must also be matched to the current version of <code>PeachPied.WordPress</code>*
-# 5. General / Important observations and findings
+# 5. General / Important observations and findings  
+    *Lack of documentation makes things difficult to implement, especially as I lack .NET and PHP experience.*  
+    *MVC integration is lacking, i.e using views WITH controllers.*  
 
-# 6. Produce a report based on all outcomes covered in project
 
 # Catchup 2  
 1. Wordpress running in MVC app. Switching between mvc pages and wordpress pages.  
