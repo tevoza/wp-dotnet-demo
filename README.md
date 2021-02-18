@@ -3,8 +3,8 @@ WP-to-dotnet Investigation, making use of the <code>PeachPied.WordPress.AspNetCo
 
 # Build Project.
 1. Clone from github: <code>git clone https://github.com/tevoza/wp-dotnet-demo</code>  
-3. Add nuget feed: <code>dotnet nuget add source https://feed.peachpie.io/wpdotnet/v3/index.json -n "peachpie.io wpdotnet"</code>
-2. MySQL database(required for WordPress):  
+2. Add nuget feed: <code>dotnet nuget add source https://feed.peachpie.io/wpdotnet/v3/index.json -n "peachpie.io wpdotnet"</code>
+3. MySQL database(required for WordPress):  
 I used docker because it is quick and fast. Don't have to.  
 <code>docker run --name=wp_dotnet -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress mysql --default-authentication-plugin=mysql_native_password</code>  
 Then, in <code>Startup.cs</code> :
@@ -21,7 +21,10 @@ Then, in <code>Startup.cs</code> :
         });
     }
 ~~~
-3.
+4. Points of interest
+- <code>Plugins/DemoWidget.cs</code> shows an example of a C# plugin written using the WordPress API. Dependency Injection is utilized to access the local MS SQL database.
+- <code>ExampleWidgetPlugin.cs</code> shows the use of C# in registering a PHP plugin(showing interoperability).
+- <code>MyContent</code> shows PHP plugins built to work with WordPress
 
 # 1. Get a demo version running (status)
 Basic Wordpress site running on .Net  
