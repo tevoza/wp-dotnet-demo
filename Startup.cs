@@ -36,6 +36,7 @@ namespace JokesWebApp
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddMvc();
             services.AddWordPress(options =>
             {
                 //MySQL database connection
@@ -45,6 +46,7 @@ namespace JokesWebApp
 
                 options.PluginContainer.Add(new DashboardPlugin());
                 options.PluginContainer.Add(new DemoWidgetPlugin());
+                options.PluginContainer.Add(new ExampleWidgetPlugin());
             });
         }
 

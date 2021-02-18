@@ -1,33 +1,11 @@
 using Pchp.Core;
-using Pchp.Core.Reflection;
-using PeachPied.WordPress.Standard;
-using PeachPied.WordPress;
-using PeachPied.WordPress.AspNetCore;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Peachpie.AspNetCore.Mvc;
-using Peachpie.AspNetCore.Web;
-using Peachpie;
-using System;
-using JokesWebApp.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
-using System.Collections;
-using JokesWebApp.Controllers;
 using JokesWebApp.Data;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using System.Linq;
-using System.Threading.Tasks;
-using JokesWebApp.Plugins;
+using Microsoft.Extensions.Logging;
 
 namespace JokesWebApp.Plugins
 {
@@ -35,49 +13,57 @@ namespace JokesWebApp.Plugins
     public class DemoWidget : WP_Widget 
     {
         Context ct;
+        private readonly ILogger _logger;
+        private readonly ApplicationDbContext _dbctx;
+        public JokesWebApp.Models.Joke joke;
         public IEnumerable<JokesWebApp.Models.Joke> JokeList { get; set; }
+        public PhpValue title { get; set; } = (PhpValue)"Default";
 
         public DemoWidget(Context ctx) : base(
             "demo_widget",
             "Demo Widget",
-            new PhpArray(2) { { "classname", "DemoWidget" }, { "description", "Wordpress widget in dotnet" } },
+            new PhpArray(2) { { "classname", "DemoWidget" }, { "description", "Wordpress widget in c#" } },
             "required"
         )
         {
             this.ct = ctx;
+            _logger = ct.CreateScope().ServiceProvider.GetService <ILogger<DemoWidget>>();
+            _dbctx = ct.CreateScope().ServiceProvider.GetService<ApplicationDbContext>();
+            _logger.LogInformation("Constructor");
         }
-
-        public string Title { get; } = "Demo Widget";
-        public string Joke { get; set;  } = "Joke";
-        public string JokeAnswer { get; set;  } = "Answer";
 
         //Rendering the widget that displays on WordPress page
         public override PhpValue widget(PhpValue args, PhpValue instance)
         {
-            WP_Hook Hook = new WP_Hook();
-            PhpValue title = Hook.apply_filters("widget_title", instance["title"]);
-            using (var scope = ct.CreateScope())
-            {
-                var db = scope.ServiceProvider.GetService<ApplicationDbContext>();
-                JokeList = db.Joke.ToList();
-            }
+            _logger.LogInformation("Widget");
 
+            JokeList = _dbctx.Joke.ToList();
             ct.RenderPartial("DemoWidgetView", this);
-            return title;
+
+            PhpValue ret = "";
+            return ret;
         }
 
+        //last 2 helper functions render form and update widget
+        //they don't do much here
+        //have not figured out how to send back data from the view 
+        //to fill the PhpValue instance["someProperty"] attribute
         public override PhpValue form(PhpValue instance)
         {
             //WIP
-            PhpValue title = "incomplete";
+            _logger.LogInformation("Form");
+
             ct.RenderPartial("DemoWidgetAdmin", this);
-            return title;
+
+            PhpValue ret = "";
+            return ret;
         }
 
         public override PhpValue update(PhpValue new_instance, PhpValue old_instance)
         {
             //WIP
-            PhpValue instance = old_instance;
+            _logger.LogInformation("Update");
+            PhpValue instance = new_instance;
             return instance;
         }
     }

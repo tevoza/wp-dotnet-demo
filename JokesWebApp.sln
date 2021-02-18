@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JokesWebApp", "JokesWebApp.
 EndProject
 Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "MyContent", "MyContent\MyContent.msbuildproj", "{0B638DB3-9350-4EBC-AA39-7E04A0AF4318}"
 EndProject
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "PhpLib", "..\PhpLib\PhpLib.msbuildproj", "{CDB09ACF-3ACB-48A3-BD7C-54DB47B533EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0B638DB3-9350-4EBC-AA39-7E04A0AF4318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B638DB3-9350-4EBC-AA39-7E04A0AF4318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B638DB3-9350-4EBC-AA39-7E04A0AF4318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB09ACF-3ACB-48A3-BD7C-54DB47B533EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB09ACF-3ACB-48A3-BD7C-54DB47B533EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB09ACF-3ACB-48A3-BD7C-54DB47B533EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB09ACF-3ACB-48A3-BD7C-54DB47B533EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,6 +16,7 @@ namespace JokesWebApp.Plugins
         {
             yield return new DashboardPlugin();
             yield return new DemoWidgetPlugin();
+            yield return new ExampleWidgetPlugin();
         }
 
     }
