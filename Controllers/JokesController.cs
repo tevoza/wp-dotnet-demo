@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using JokesWebApp.Data;
 using JokesWebApp.Models;
+using Microsoft.Extensions.Logging;
 
 namespace JokesWebApp.Controllers
 {
     public class JokesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger _logger;
 
-        public JokesController(ApplicationDbContext context)
+        public JokesController(ApplicationDbContext context, ILogger<JokesController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public string Test()
@@ -51,6 +51,7 @@ namespace JokesWebApp.Controllers
         // GET: Jokes/Create
         public IActionResult Create()
         {
+            _logger.LogInformation("Returning Create page!");
             return View();
         }
 
@@ -61,6 +62,7 @@ namespace JokesWebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,JokeQuestion,JokeAnswer")] Joke joke)
         {
+            _logger.LogInformation("Called Jokes Create");
             if (ModelState.IsValid)
             {
                 _context.Add(joke);

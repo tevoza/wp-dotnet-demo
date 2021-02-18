@@ -3,6 +3,7 @@ using Pchp.Core;
 using Peachpie.AspNetCore.Mvc;
 using PeachPied.WordPress.Standard;
 
+//Example of a dashboard plugin rendering partial view
 namespace JokesWebApp.Plugins
 {
     public class DashboardPlugin : IWpPlugin

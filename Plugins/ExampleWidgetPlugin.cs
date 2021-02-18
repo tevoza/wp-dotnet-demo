@@ -10,16 +10,18 @@ using Peachpie;
 
 namespace JokesWebApp.Plugins
 {
-    //This class takes care of registering the C# DemoWidget plugin.
-    public class DemoWidgetPlugin : IWpPlugin
+    public class ExampleWidgetPlugin : IWpPlugin
     {
+        //Regsitering a widget "jpen_Example_Widget" which is defined in php.
+        //Shows how existing php can be called and used within c#
+        //After building the PhpLib, the class implementation becomes available here.
         WpApp app;
         public delegate int Del();
         public int RegisterMyWidget()
         {
-            var tinfo = PhpTypeInfoExtension.GetPhpTypeInfo<DemoWidget>();
-            this.app.Context.DeclareType(tinfo, "DemoWidget");
-            this.app.Context.Call("register_widget", "DemoWidget");
+            var tinfo = PhpTypeInfoExtension.GetPhpTypeInfo<jpen_Example_Widget>();
+            this.app.Context.DeclareType(tinfo, "jpen_Example_Widget");
+            this.app.Context.Call("register_widget", "jpen_Example_Widget");
             return 0;
         }
 

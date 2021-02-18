@@ -1,6 +1,6 @@
 ﻿@model JokesWebApp.Plugins.DemoWidget
 
 <p>
-    <label for="@Model.Joke">Joke:</label>
-    <input type="text" id="@Model.Joke" name="@Model.Joke" value="@Model.Joke" />
+    <label for="@Model.get_field_id("title")">Title:</label>
+    <input type="text" id="@Model.get_field_id("title")" name="@Model.get_field_name("title")" value="@Model.title" />
 </p>
