@@ -27,25 +27,3 @@
     </tbody>
 </table>
 
-<h4>Add new Joke(unimplemented)</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="joke.JokeQuestion" class="control-label"></label>
-                <input asp-for="joke.JokeQuestion" class="form-control" />
-                <span asp-validation-for="joke.JokeQuestion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="joke.JokeAnswer" class="control-label"></label>
-                <input asp-for="joke.JokeAnswer" class="form-control" />
-                <span asp-validation-for="joke.JokeAnswer" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
