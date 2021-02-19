@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PhpLib\PhpLib.msbuildproj" />
+    <ProjectReference Include="PhpLib\PhpLib.msbuildproj" />
     <ProjectReference Include="MyContent\MyContent.msbuildproj" />
   </ItemGroup>
 
