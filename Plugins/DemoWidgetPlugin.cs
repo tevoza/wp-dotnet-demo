@@ -1,12 +1,6 @@
 ﻿using Pchp.Core;
 using Pchp.Core.Reflection;
 using PeachPied.WordPress.Standard;
-using PeachPied.WordPress;
-using PeachPied.WordPress.AspNetCore;
-using Microsoft.AspNetCore.Mvc.ViewEngines;
-using Peachpie.AspNetCore.Mvc;
-using Peachpie.AspNetCore.Web;
-using Peachpie;
 
 namespace JokesWebApp.Plugins
 {

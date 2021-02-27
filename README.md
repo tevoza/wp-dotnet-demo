@@ -7,21 +7,45 @@ WP-to-dotnet Investigation, making use of the <code>PeachPied.WordPress.AspNetCo
 2. MySQL database(required for WordPress):  
 I used docker because it is quick and fast. Don't have to.  
 <code>docker run --name=wp_dotnet -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress mysql --default-authentication-plugin=mysql_native_password</code>  
-Then, in <code>Startup.cs</code> :
+4. Then, in <code>Startup.cs</code>, a few important configuration settings. to note:
 ~~~c#
     public void ConfigureServices(IServiceCollection services)
     {
     ...
         services.AddWordPress(options =>
         {
-            options.DbHost = "localhost"; //if running on local machine
+            //MySQL database connection
+            options.DbHost = "192.168.1.16";//I used a different machine, can use localhost
             options.DbPassword = "password";
             options.DbName = "wordpress";
+
+            //explicitely set url, or wordpress gets confused.
+            //for example starting with kestrel vs iis, change the port accordingly
+            // "/content" is used to demonstrate wordpress being used next to MVC application
+            options.HomeUrl = "https://localhost:5001/content";
+            options.SiteUrl = "https://localhost:5001/content";
+
+            //Plugins written or registered in C#
+            options.PluginContainer.Add(new DashboardPlugin());
+            options.PluginContainer.Add(new DemoWidgetPlugin());
             ...  
         });
     }
+    ...
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        ...
+        //reroutes wordpress to /content
+        app.Map(new PathString("/content"), wordpressApp =>
+        {
+            wordpressApp.UseWordPress();
+        });
+        //if undesired, remove the above and uncomment below
+        //app.UseWordPress();
+        ...
+    }
+    ...
 ~~~
-3.
 
 # 1. Get a demo version running (status)
 Basic Wordpress site running on .Net  
