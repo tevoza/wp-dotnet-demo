@@ -46,9 +46,21 @@ I used docker because it is quick and fast. Don't have to.
     }
     ...
 ~~~
-4. Points of interest
+5. `dotnet run` to start app with kestrel. If using `ISS Express` remember to change port as described above.
+6. A fresh WordPress install is available at "/content"(or click the WordPress link in the webapp)
+7. WordPress signup details - Fill out the form and sign in
+8. Navigate to admin configuration page (or navigate to /content/wp-admin/)
+9. Themes - navigate to Appearence -> Themes. A php-loaded theme `Lodestar` is available to use.
+    - few precompiled themes are available in the nuget feed. They can simply be added in the package manager from the prescribed nuget feed.
+    - MAKE SURE that the theme version matches the version `PeachPied.WordPress.AspNetCore` and rebuild project.
+    - PHP themes without nugets can be manually dropped in the `MyContent` folder, and built with PeachPie.
+10. Plugins - a few plugins have been preloaded for this demo. Specifically enable `amr-shortcode-any-widget`
+    - Everything mentioned above about Themes applies to plugins.
+11. Enable Widgets. Appearence -> Widgets. Add the `Demo Widget` to one of the available page widgets on the right.
+    - This object showcases a widget written in C# which posts data from the app's database.
+    - AMR shortcodes allows for widgets to be dropped in the body of any specific page(instead of just headers, footers and sidebars.)
+12. Points of interest
 - <code>Plugins/DemoWidget.cs</code> shows an example of a C# plugin written using the WordPress API. Dependency Injection is utilized to access the local MS SQL database.
-- <code>ExampleWidgetPlugin.cs</code> shows the use of C# in registering a PHP plugin(showing interoperability).
 - <code>MyContent</code> shows PHP plugins built to work with WordPress
 
 # 1. PeachPied investigation:
