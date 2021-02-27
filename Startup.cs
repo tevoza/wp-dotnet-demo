@@ -2,17 +2,11 @@ using JokesWebApp.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using JokesWebApp.Plugins;
 
 namespace JokesWebApp
@@ -40,13 +34,20 @@ namespace JokesWebApp
             services.AddWordPress(options =>
             {
                 //MySQL database connection
-                options.DbHost = "192.168.1.16";
+                options.DbHost = "192.168.1.16";//I used a different machine, can use localhost
                 options.DbPassword = "password";
                 options.DbName = "wordpress";
 
+                //explicitely set url, or wordpress gets confused.
+                //for example starting with kestrel vs iis, change the port accordingly
+                // "/content" is used to demonstrate wordpress running next to MVC application
+                //can be changed to just launch wordpress
+                options.HomeUrl = "https://localhost:5001/content";
+                options.SiteUrl = "https://localhost:5001/content";
+
+                //Plugins written or registered in C#
                 options.PluginContainer.Add(new DashboardPlugin());
                 options.PluginContainer.Add(new DemoWidgetPlugin());
-                options.PluginContainer.Add(new ExampleWidgetPlugin());
             });
         }
 
@@ -69,10 +70,13 @@ namespace JokesWebApp
 
             app.UseRouting();
 
+            //reroutes wordpress to /content
             app.Map(new PathString("/content"), wordpressApp =>
             {
                 wordpressApp.UseWordPress();
             });
+            //if undesired, remove the above and uncomment below
+            //app.UseWordPress();
 
             app.UseAuthentication();
             app.UseAuthorization();
@@ -85,5 +89,6 @@ namespace JokesWebApp
                 endpoints.MapRazorPages();
             });
         }
+
     }
 }
